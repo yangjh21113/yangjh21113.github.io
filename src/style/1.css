@@ -1,0 +1,18 @@
+.text {
+    background: linear-gradient(317.23deg, #DE2929 3.6%, #E33E75 39.75%, #E64CA8 71.38%, #D461D7 100%), #000000;
+    -webkit-background-clip: text; 
+    color: transparent;
+}
+
+.text2 {
+    position: relative;
+    color: yellow;
+    
+}
+.text2::before {
+    content: attr(text);
+    position: absolute;
+    z-index: 10;
+    color: pink;
+    -webkit-mask: linear-gradient(to left, red, transparent );
+}
