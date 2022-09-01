@@ -29,7 +29,7 @@ export default {
     serve({
       open: true,
       port: 3001,
-      contentBase: './dist',
+      contentBase: '',
     }),
   ],
   external: ['lodash', 'jquery'],
