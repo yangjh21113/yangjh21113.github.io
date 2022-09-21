@@ -3,10 +3,11 @@
     "version": "1.0.0",
     "description": "#### 介绍 rollup",
     "main": "index.js",
+    "type":"module",
     "scripts": {
         "build": "rollup --config rollup.config.build.js",
         "dev": "rollup --config rollup.config.js -w",
-        "test": "jest"
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
     },
     "repository": {
         "type": "git"

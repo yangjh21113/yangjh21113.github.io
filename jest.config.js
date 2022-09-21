@@ -1,5 +1,11 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
-module.exports = {
+//module.exports = {
+//    testMatch: ["**/__test__/**/*.js"],
+//    verbose: true
+//}
+
+export default {
     testMatch: ["**/__test__/**/*.js"],
-    verbose: true
+    verbose: true,
+    transform: {}
 }
