@@ -1,6 +1,11 @@
+const { checkArrayHasMin } = require('../src/js/4')
+//function checkArrayHasMin(arr1, arr2) {
+//	let min = [Math.min(...arr1), Math.min(...arr2)]
+//	let max = [Math.max(...arr1), Math.max(...arr2)]
+//	return Math.max(...min) <= Math.min(...max)
+//}
 
-function a(a){return 1}
 
-test('x', ()=> {
-    expect(a(1)).toEqual(1)
+test('测试', ()=> {
+    expect(checkArrayHasMin([1,2],[1])).toEqual(true)
 })
