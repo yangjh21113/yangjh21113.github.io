@@ -1,0 +1,17 @@
+.box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  border-image-source: linear-gradient(
+    265.13deg,
+    #a392e8 -6.01%,
+    #f17e99 33.34%,
+    #f0933d 48.66%,
+    #96be2a 64.54%,
+    #5acba2 83.26%
+  );
+  border-image-slice: 10%;
+  border-style: solid;
+  border-radius: 20px;
+}
