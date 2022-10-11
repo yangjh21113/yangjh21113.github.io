@@ -10,7 +10,7 @@ export default {
   input: 'src/main.js',
   output: {
     file: 'dist/bundle.js',
-    format: 'iife',
+    //format: 'iife',
     name: 'bundleName',
     globals: {
       lodash: '_',
@@ -27,7 +27,7 @@ export default {
     terser(),
     postcss(),
     serve({
-      open: true,
+      //open: true,
       port: 3001,
       contentBase: '',
     }),
