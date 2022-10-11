@@ -6,7 +6,8 @@
     "scripts": {
         "build": "rollup --config rollup.config.build.js",
         "dev": "rollup --config rollup.config.js -w",
-        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+        "mocha": "mocha --version"
     },
     "repository": {
         "type": "git"
@@ -22,6 +23,7 @@
         "@types/jest": "^29.0.3",
         "jquery": "^3.6.1",
         "lodash": "^4.17.21",
+        "mocha": "^10.0.0",
         "postcss": "^8.4.16",
         "rollup": "^2.78.1",
         "rollup-plugin-babel": "^4.4.0",
