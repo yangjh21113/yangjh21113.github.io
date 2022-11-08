@@ -7,35 +7,62 @@
     <title>Document</title>
     <script src="./dist/bundle.js"></script>
     <style>
-        #btn_submit{
-            user-select: none;
+        .inline-block {
+            display: inline-block;
+            color: red;
+        }
+        .para-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .absolute-para {
+            position: absolute;
+            left:0;
+            top:0
+        }
+
+        .fixed-para {
+            position: absolute;
+            left:0;
+            top:0
         }
     </style>
 </head>
 <body>
-    <!--<p>
-        <span>今天是个好日子。</span>
-        <div>内部的div</div>
-        <ol>
-            <li>xx</li>
-        </ol>
-    </p>-->
-   <!--<p><h6>xx</h6></p>-->
-   <!--<p><dt>xxx</dt></p>-->
-   <h1><div style="color: red">xxxx</div></h1>
+    <div id="example1">例子1: 今天是个好日子<p class="inline-block">段落</p>你在干什么</div>
 
-   <h2><p style="color: blue">xxxx</2></h1>
-   
-    <h3>
-        <ol>
-            <li>xxx</li>
-        </ol>
-    </h3>
+    <br/>
+    <div id="example2">例子2: 今天是个好日子<div class="inline-block">段落
+        <p class="inline-block absolute-para">定位absolute定位</p>
+    </div>你在干什么</div>
 
-    <dl>
-        <dt>
-            <dt><p>xxxx</p></dt>
-        </dt>
-    </dl>
+    <br/>
+    <div id="example3">例子3: 今天是个好日子<div class="para-wrapper">段落
+        <p class="inline-block fixed-para">定位fixed 定位</p>
+    </div>你在干什么</div>
+
+    <br/><br/><br/>
+    <div id="example4">例子4: 今天是个好日子<div class="para-wrapper">段落
+        <span class="inline-block fixed-para">定位fixed span</span>
+    </div>你在干什么</div>
+    <br/><br/><br/>
+    <div id="example5">例子5: 今天是个好日子<div class="para-wrapper">段落
+        <span class="inline-block absolute-para">定位absolute span</span>
+    </div>你在干什么</div>
+
+    <br/><br/><br/>
+    <div id="example6">例子6: 今天是个好日子<div class="para-wrapper">段落
+        <span class="inline-block"> span</span>
+    </div>你在干什么</div>
+
+    <script>
+       console.log(1, document.getElementById('example1').innerText)
+       console.log(2, document.getElementById('example2').innerText)
+       console.log(3, document.getElementById('example3').innerText)
+       console.log(4, document.getElementById('example4').innerText)
+       console.log(5, document.getElementById('example5').innerText)
+       console.log(6, document.getElementById('example6').innerText)
+    </script>
+
 </body>
 </html>
