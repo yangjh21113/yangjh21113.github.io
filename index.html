@@ -13,21 +13,29 @@
     </style>
 </head>
 <body>
-   <div>今天是个好xx日子</div>
-   <br>
-   <!--事件绑定onclick都小些，值是函数，要加括号-->
-   <div type="submit" id="btn_submit"  onclick="clickBtn()"> 点击消失 </div>
-    <!--脚本要放在按钮下面-->
-   <script>
-    console.log(11111)
-    function clickBtn(e) {
-        //e.stopPropagation()
-        e.preventDefault() // 不好使，还是需要设置use-select:none
-        console.log(e, 'click')
-    }
-    //clickBtn()
-    //document.getElementById('btn_submit').addEventListener('click', clickBtn)
-    </script>
+    <!--<p>
+        <span>今天是个好日子。</span>
+        <div>内部的div</div>
+        <ol>
+            <li>xx</li>
+        </ol>
+    </p>-->
+   <!--<p><h6>xx</h6></p>-->
+   <!--<p><dt>xxx</dt></p>-->
+   <h1><div style="color: red">xxxx</div></h1>
+
+   <h2><p style="color: blue">xxxx</2></h1>
    
+    <h3>
+        <ol>
+            <li>xxx</li>
+        </ol>
+    </h3>
+
+    <dl>
+        <dt>
+            <dt><p>xxxx</p></dt>
+        </dt>
+    </dl>
 </body>
 </html>
