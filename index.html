@@ -33,5 +33,44 @@
     <div class="outer">
         <div class="circle"></div>
     </div>
+    <script>
+        function checkOrderStatus() {
+            console.log(1);
+        }
+        setInterval(() => {
+            //checkOrderStatus()
+            //console.log(1)
+        }, 1000)
+
+        let count = 0
+        let obj = {num:0}
+        function myInterval(callback, interval) {
+            obj.num++
+            obj['n' + obj.num] = true
+            let intervalId = obj.num
+            let startTime = Date.now()
+            let loop = () => {
+                if (!obj['n'+ intervalId]) {
+                    return
+                }
+                if (Date.now() > startTime + interval * (count + 1)) {
+                    count ++
+                    callback(count)
+                }
+                window.requestAnimationFrame(loop)
+            }
+            loop()
+            return intervalId
+        }
+        function clearMyInterval(intervalId) {
+            delete obj['n' + intervalId]
+        }
+
+        let timerId = myInterval((intervalId) => {
+            if (count > 3) {
+                clearMyInterval(timerId)
+            }
+       }, 1000)
+    </script>
 </body>
 </html>
