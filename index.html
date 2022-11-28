@@ -42,15 +42,22 @@
             //console.log(1)
         }, 1000)
 
-        let count = 0
-        let obj = {num:0}
+       
+        // 存放系统中的定时器id
+        let timerIdMap = { num: 0 }
         function myInterval(callback, interval) {
-            obj.num++
-            obj['n' + obj.num] = true
-            let intervalId = obj.num
+            // 每设置一次定时器，num++ 代表系统中有num个自定义的定时器
+            timerIdMap.num ++
+            // 第 num 个定时器的id
+            let intervalId = 'id' + timerIdMap.num
+            timerIdMap[intervalId] = true
+            // 循环次数
+            let count = 0
+            
             let startTime = Date.now()
             let loop = () => {
-                if (!obj['n'+ intervalId]) {
+                // 系统map中不存在这个id，就停止循环
+                if (!timerIdMap[intervalId]) {
                     return
                 }
                 if (Date.now() > startTime + interval * (count + 1)) {
@@ -63,11 +70,13 @@
             return intervalId
         }
         function clearMyInterval(intervalId) {
-            delete obj['n' + intervalId]
+            delete timerIdMap[intervalId]
         }
 
-        let timerId = myInterval((intervalId) => {
+        let timerId = myInterval((count) => {
+            console.log(count)
             if (count > 3) {
+                console.log('end')
                 clearMyInterval(timerId)
             }
        }, 1000)
